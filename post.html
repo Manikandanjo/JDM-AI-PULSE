@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post - JDM AI Pulse</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cherry: {
+                            50: '#fdf2f2',
+                            100: '#fde8e8',
+                            200: '#fbd5d5',
+                            300: '#f8b4b4',
+                            400: '#f98080',
+                            500: '#f05252',
+                            600: '#e02424', // Standard red
+                            700: '#c81e1e', // Darker red
+                            800: '#9b1c1c', // Cherry Red
+                            900: '#771d1d', // Deep Cherry
+                        },
+                        gold: {
+                            100: '#fbf5d4',
+                            200: '#f5ebaa',
+                            300: '#f0e180',
+                            400: '#ebd756',
+                            500: '#e6cd2c', // Standard Gold
+                            600: '#cca300', // Darker Gold
+                            700: '#997a00',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .text-gradient-gold {
+            background: linear-gradient(to right, #e6cd2c, #f0e180, #cca300);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-cherry-900/95 backdrop-blur-md border-b border-gold-600/30 text-white"
+        id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-serif font-bold tracking-wider flex items-center gap-2">
+                <i class="fas fa-feather-alt text-gold-400"></i>
+                <span class="text-gradient-gold">JDM AI PULSE</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html"
+                    class="hover:text-gold-400 transition-colors text-sm uppercase tracking-widest">Home</a>
+                <a href="index.html#blog"
+                    class="hover:text-gold-400 transition-colors text-sm uppercase tracking-widest">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-6 pt-32 pb-20">
+        <article id="post-container"
+            class="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl p-8 md:p-12 border border-gray-100">
+            <!-- Post content will be injected here -->
+            <div class="text-center py-20">
+                <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-cherry-900 mx-auto"></div>
+                <p class="mt-4 text-gray-500">Loading post...</p>
+            </div>
+        </article>
+    </main>
+
+    <footer class="bg-cherry-950 text-white py-12 border-t border-white/10">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-500 text-sm">
+                &copy; 2025 JDM AI Pulse. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof loadSinglePost === 'function') loadSinglePost();
+        });
+    </script>
+</body>
+
+</html>

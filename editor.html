@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write Post - JDM AI Pulse</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cherry: {
+                            50: '#fdf2f2',
+                            100: '#fde8e8',
+                            200: '#fbd5d5',
+                            300: '#f8b4b4',
+                            400: '#f98080',
+                            500: '#f05252',
+                            600: '#e02424', // Standard red
+                            700: '#c81e1e', // Darker red
+                            800: '#9b1c1c', // Cherry Red
+                            900: '#771d1d', // Deep Cherry
+                        },
+                        gold: {
+                            100: '#fbf5d4',
+                            200: '#f5ebaa',
+                            300: '#f0e180',
+                            400: '#ebd756',
+                            500: '#e6cd2c', // Standard Gold
+                            600: '#cca300', // Darker Gold
+                            700: '#997a00',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .text-gradient-gold {
+            background: linear-gradient(to right, #e6cd2c, #f0e180, #cca300);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-cherry-900/95 backdrop-blur-md border-b border-gold-600/30 text-white"
+        id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-serif font-bold tracking-wider flex items-center gap-2">
+                <i class="fas fa-feather-alt text-gold-400"></i>
+                <span class="text-gradient-gold">JDM AI PULSE</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html"
+                    class="hover:text-gold-400 transition-colors text-sm uppercase tracking-widest">Home</a>
+                <a href="index.html#blog"
+                    class="hover:text-gold-400 transition-colors text-sm uppercase tracking-widest">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-6 pt-32 pb-20">
+        <div class="max-w-3xl mx-auto bg-white rounded-3xl shadow-2xl p-8 md:p-12 border border-gray-100">
+            <h2 class="text-3xl font-serif font-bold text-cherry-900 mb-8 border-b border-gray-100 pb-4">Create New Post
+            </h2>
+
+            <form id="post-form" class="space-y-6">
+                <div>
+                    <label for="title" class="block text-sm font-medium text-gray-700 mb-2">Title</label>
+                    <input type="text" id="title"
+                        class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-cherry-500 focus:ring-1 focus:ring-cherry-500 transition-all"
+                        placeholder="Enter a catchy title..." required>
+                </div>
+
+                <div>
+                    <label for="excerpt" class="block text-sm font-medium text-gray-700 mb-2">Short Description</label>
+                    <input type="text" id="excerpt"
+                        class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-cherry-500 focus:ring-1 focus:ring-cherry-500 transition-all"
+                        placeholder="A brief summary for the feed..." required>
+                </div>
+
+                <div>
+                    <label for="publisher" class="block text-sm font-medium text-gray-700 mb-2">Publisher Name</label>
+                    <input type="text" id="publisher"
+                        class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-cherry-500 focus:ring-1 focus:ring-cherry-500 transition-all"
+                        placeholder="e.g., Dr. M. Manikandan" required>
+                </div>
+
+                <div>
+                    <label for="cover-image" class="block text-sm font-medium text-gray-700 mb-2">Cover Image</label>
+                    <div class="relative">
+                        <select id="cover-image"
+                            class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-cherry-500 focus:ring-1 focus:ring-cherry-500 transition-all appearance-none">
+                            <option
+                                value="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80">
+                                AI Education (Default)</option>
+                            <option
+                                value="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80">
+                                Neural Networks</option>
+                            <option
+                                value="https://images.unsplash.com/photo-1555255707-c07966088b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80">
+                                Tech Circuit</option>
+                            <option
+                                value="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80">
+                                Robotics</option>
+                            <option
+                                value="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80">
+                                Future City</option>
+                        </select>
+                        <div
+                            class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-700">
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="content" class="block text-sm font-medium text-gray-700 mb-2">Content</label>
+                    <textarea id="content"
+                        class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-cherry-500 focus:ring-1 focus:ring-cherry-500 transition-all h-64"
+                        placeholder="Write your story here..." required></textarea>
+                </div>
+
+                <div class="flex justify-end gap-4 pt-6">
+                    <a href="index.html"
+                        class="px-6 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors">Cancel</a>
+                    <button type="submit"
+                        class="px-8 py-3 bg-cherry-900 text-white font-bold rounded-lg hover:bg-cherry-800 transition-colors shadow-lg shadow-cherry-900/20">Publish
+                        Post</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="bg-cherry-950 text-white py-12 border-t border-white/10">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-500 text-sm">
+                &copy; 2025 JDM AI Pulse. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
